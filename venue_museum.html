@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="venue_museum_page_title">National Museum</title>
+    <meta name="description" content="Discover the National Museum of the Republic of Kazakhstan." data-i18n-desc="venue_museum_page_desc">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        .venue-hero {
+            position: relative;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 100px;
+        }
+
+        .venue-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(0, 56, 83, 0.7), rgba(0, 176, 199, 0.4)), url('images/national_museum_1774889537441.png');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .venue-hero h1 {
+            color: #fff !important;
+            margin-bottom: 8px;
+        }
+
+        .venue-badge-large {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--kz-blue-dark);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .venue-content-section {
+            padding: 80px 0;
+        }
+
+        .venue-article {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        @media (min-width: 992px) {
+            .venue-article {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .venue-info-card {
+            background: var(--surface-color);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .venue-info-card h3 {
+            font-size: 2rem;
+            margin-bottom: 24px;
+            color: var(--kz-blue-dark);
+        }
+
+        .venue-info-list {
+            list-style: none;
+            margin-top: 32px;
+        }
+
+        .venue-info-list li {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 1.1rem;
+        }
+
+        .venue-info-list i {
+            color: var(--kz-yellow-dark);
+            font-size: 1.5rem;
+            margin-top: 2px;
+        }
+
+        .breadcrumb {
+            margin-bottom: 32px;
+        }
+        
+        .breadcrumb a {
+            color: var(--text-muted);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color var(--transition-speed);
+        }
+        
+        .breadcrumb a:hover, .breadcrumb a.active {
+            color: var(--kz-blue-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="ph ph-sun-horizon"></i>
+                <span>Qazaqstan</span>
+            </a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+                    <li><a href="culture.html" class="nav-link" data-i18n="nav_culture">Culture</a></li>
+                    <li><a href="index.html#venues" class="nav-link active" data-i18n="nav_venues_link">Venues</a></li>
+                </ul>
+                <div class="lang-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="kk">KK</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- specific Hero Section -->
+        <section class="venue-hero fade-in">
+            <div class="venue-hero-bg"></div>
+            <div class="container">
+                <span class="venue-badge-large" data-i18n="badge_museum">Museum</span>
+                <h1 data-i18n="venue_museum_page_title">National Museum</h1>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="venue-content-section section">
+            <div class="container">
+                <div class="breadcrumb fade-in">
+                    <a href="index.html">Home</a> <i class="ph ph-caret-right"></i>
+                    <a href="index.html#venues" data-i18n="nav_venues_link">Venues</a> <i class="ph ph-caret-right"></i>
+                    <a href="#" class="active" data-i18n="venue_museum_page_title">National Museum</a>
+                </div>
+
+                <div class="venue-article fade-in">
+                    <div>
+                        <h2 data-i18n="museum_overview_title">About the National Museum</h2>
+                        <p class="lead" style="margin-bottom:24px;" data-i18n="museum_overview_p1">The National Museum of the Republic of Kazakhstan is a unique modern complex spanning history from ancient times to the modern state. One of its most famous exhibits is the 'Golden Man', symbol of the nation's rich Saka heritage.</p>
+                        
+                        <img src="images/national_museum_1774889537441.png" alt="National Museum" style="border-radius: var(--border-radius); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                    </div>
+                    
+                    <div class="venue-info-card">
+                        <h3 data-i18n="museum_key_title">Key Information</h3>
+                        <ul class="venue-info-list">
+                            <li><i class="ph-fill ph-check-circle"></i> <span data-i18n="museum_key_1">Opened: 2014</span></li>
+                            <li><i class="ph-fill ph-check-circle"></i> <span data-i18n="museum_key_2">Scale: Largest museum in Central Asia</span></li>
+                            <li><i class="ph-fill ph-check-circle"></i> <span data-i18n="museum_key_3">Highlights: Hall of Gold, Hall of Ethnography, Hall of Independent Kazakhstan</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="brand">
+                <i class="ph ph-sun-horizon"></i>
+                <span>Qazaqstan</span>
+            </div>
+            <p data-i18n="footer_text">Designed with ❤️ for exploring the Kazakh heritage.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

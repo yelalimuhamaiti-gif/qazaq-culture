@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="title">Qazaqstan: Culture & Heritage</title>
+    <meta name="description" content="Explore the rich culture, traditions, and iconic venues of Kazakhstan." data-i18n-desc="desc">
+    
+    <!-- Google Fonts for Modern Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons for lightweight UI icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <i class="ph ph-sun-horizon"></i>
+                <span>Qazaqstan</span>
+            </a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link active" data-i18n="nav_home">Home</a></li>
+                    <li><a href="culture.html" class="nav-link" data-i18n="nav_culture">Culture</a></li>
+                    <li><a href="#venues" class="nav-link" data-i18n="nav_venues">Venues</a></li>
+                </ul>
+                <div class="lang-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="kk">KK</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero fade-in">
+            <div class="hero-bg" style="background-image: linear-gradient(to right, rgba(0, 56, 83, 0.8), rgba(0, 176, 199, 0.4)), url('images/hero_astana_1774889339277.png');"></div>
+            <div class="container hero-content">
+                <span class="eyebrow" data-i18n="hero_eyebrow">Welcome to the Heart of Eurasia</span>
+                <h1 data-i18n="hero_title">Discover the Soul of <br><span class="highlight">Kazakhstan</span></h1>
+                <p data-i18n="hero_desc">A journey through nomadic traditions, majestic modern cities, and a deeply rooted cultural heritage.</p>
+                <a href="culture.html" class="btn btn-primary" data-i18n="hero_btn">
+                    Explore Culture <i class="ph ph-arrow-right"></i>
+                </a>
+            </div>
+            
+            <!-- Traditional subtle border decoration -->
+            <div class="hero-bottom-pattern"></div>
+        </section>
+
+        <!-- Culture and Traditions Section -->
+        <section id="culture" class="section glass-section fade-in">
+            <div class="container section-container">
+                <div class="content-text">
+                    <h2 data-i18n="culture_title">Culture & <span class="highlight-alt">Traditions</span></h2>
+                    <p class="lead" data-i18n="culture_lead">Kazakh culture is a vibrant tapestry woven from centuries of nomadic life on the vast steppes.</p>
+                    
+                    <div class="tradition-grid">
+                        <article class="tradition-card">
+                            <div class="icon-box"><i class="ph ph-tent"></i></div>
+                            <h3 data-i18n="yurt_title">The Yurt (Kiiz Ui)</h3>
+                            <p data-i18n="yurt_desc">An ingenious mobile dwelling that perfectly adapted to the nomadic way of life, reflecting a deep connection with nature.</p>
+                        </article>
+                        <article class="tradition-card">
+                            <div class="icon-box"><i class="ph ph-music-notes"></i></div>
+                            <h3 data-i18n="dombra_title">Dombra</h3>
+                            <p data-i18n="dombra_desc">The soul of the Kazakh people. This traditional two-stringed instrument carries the melodies of the steppe through generations.</p>
+                        </article>
+                        <article class="tradition-card">
+                            <div class="icon-box"><i class="ph ph-horse"></i></div>
+                            <h3 data-i18n="nomadic_title">Nomadic Heritage</h3>
+                            <p data-i18n="nomadic_desc">From masterful horseback riding to intricate crafts and textiles, the nomadic spirit is alive in modern Kazakh identity.</p>
+                        </article>
+                        <article class="tradition-card">
+                            <div class="icon-box"><i class="ph ph-bowl-food"></i></div>
+                            <h3 data-i18n="hospitality_title">Hospitality (Qonaqjaylyq)</h3>
+                            <p data-i18n="hospitality_desc">Treating guests with the utmost respect and offering abundant traditional food is a sacred duty in Kazakh society.</p>
+                        </article>
+                    </div>
+                </div>
+                
+                <div class="content-image">
+                    <img src="images/kazakh_pattern_1774889397839.png" alt="Traditional Kazakh Pattern" class="floating-img rounded-img" />
+                    <div class="glow-backdrop"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Venues Section -->
+        <section id="venues" class="section fade-in">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 data-i18n="venues_title">Cultural <span class="highlight">Venues</span></h2>
+                    <p data-i18n="venues_desc">Explore the iconic architectural landmarks and cultural centers of Astana.</p>
+                </div>
+
+                <div class="venues-grid">
+                    <!-- Venue 1 -->
+                    <article class="venue-card">
+                        <div class="venue-img-wrapper">
+                            <img src="images/astana_opera_1774889471575.png" alt="Astana Opera" loading="lazy">
+                            <span class="venue-badge" data-i18n="badge_theatre">Theatre</span>
+                        </div>
+                        <div class="venue-content">
+                            <h3 data-i18n="opera_title">Astana Opera</h3>
+                            <p data-i18n="opera_desc">A masterpiece of neoclassical architecture, presenting world-class opera and ballet performances.</p>
+                            
+                            <a href="venue_opera.html" class="venue-read-more" style="display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-weight:700; color:var(--kz-blue);">
+                                <span data-i18n="read_more">Read More</span> <i class="ph ph-arrow-right"></i>
+                            </a>
+
+                            <div class="rating-system" data-venue="opera">
+                                <div class="stars">
+                                    <i class="ph-fill ph-star" data-value="1"></i>
+                                    <i class="ph-fill ph-star" data-value="2"></i>
+                                    <i class="ph-fill ph-star" data-value="3"></i>
+                                    <i class="ph-fill ph-star" data-value="4"></i>
+                                    <i class="ph ph-star" data-value="5"></i>
+                                </div>
+                                <span class="rating-text" data-i18n="rating_text_opera">4.0 (Rate this)</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Venue 2 -->
+                    <article class="venue-card">
+                        <div class="venue-img-wrapper">
+                            <img src="images/national_museum_1774889537441.png" alt="National Museum of the Republic of Kazakhstan" loading="lazy">
+                            <span class="venue-badge" data-i18n="badge_museum">Museum</span>
+                        </div>
+                        <div class="venue-content">
+                            <h3 data-i18n="museum_title">National Museum of the Republic of Kazakhstan</h3>
+                            <p data-i18n="museum_desc">The largest museum in Central Asia, housing rich collections from ancient times to modern days.</p>
+                            
+                            <a href="venue_museum.html" class="venue-read-more" style="display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-weight:700; color:var(--kz-blue);">
+                                <span data-i18n="read_more">Read More</span> <i class="ph ph-arrow-right"></i>
+                            </a>
+
+                            <div class="rating-system" data-venue="museum">
+                                <div class="stars">
+                                    <i class="ph-fill ph-star" data-value="1"></i>
+                                    <i class="ph-fill ph-star" data-value="2"></i>
+                                    <i class="ph-fill ph-star" data-value="3"></i>
+                                    <i class="ph-fill ph-star" data-value="4"></i>
+                                    <i class="ph-fill ph-star" data-value="5"></i>
+                                </div>
+                                <span class="rating-text" data-i18n="rating_text_museum">5.0 (Rate this)</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Venue 3 -->
+                    <article class="venue-card">
+                        <div class="venue-img-wrapper">
+                            <img src="images/nur_alem_1774889703917.png" alt="Nur Alem Future Energy Museum" loading="lazy">
+                            <span class="venue-badge" data-i18n="badge_centre">Centre</span>
+                        </div>
+                        <div class="venue-content">
+                            <h3 data-i18n="nuralem_title">Nur Alem (Future Energy Museum)</h3>
+                            <p data-i18n="nuralem_desc">The iconic glowing sphere from Expo 2017, functioning as a vibrant interactive science and tech museum.</p>
+                            
+                            <a href="venue_nuralem.html" class="venue-read-more" style="display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-weight:700; color:var(--kz-blue);">
+                                <span data-i18n="read_more">Read More</span> <i class="ph ph-arrow-right"></i>
+                            </a>
+
+                            <div class="rating-system" data-venue="nuralem">
+                                <div class="stars">
+                                    <i class="ph-fill ph-star" data-value="1"></i>
+                                    <i class="ph-fill ph-star" data-value="2"></i>
+                                    <i class="ph-fill ph-star" data-value="3"></i>
+                                    <i class="ph-fill ph-star" data-value="4"></i>
+                                    <i class="ph-fill ph-star" data-value="5"></i>
+                                </div>
+                                <span class="rating-text" data-i18n="rating_text_nuralem">5.0 (Rate this)</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="brand">
+                <i class="ph ph-sun-horizon"></i>
+                <span>Qazaqstan</span>
+            </div>
+            <p data-i18n="footer_text">Designed with ❤️ for exploring the Kazakh heritage.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

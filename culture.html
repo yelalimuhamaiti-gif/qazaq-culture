@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="culture_page_title">Qazaqstan: Rich Culture & Traditions</title>
+    <meta name="description" content="Deep dive into the customs, hospitality, and heritage of Kazakhstan." data-i18n-desc="culture_page_desc">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* Specific Styles for Culture Page */
+        .culture-hero {
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding-top: 100px;
+        }
+
+        .culture-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(0, 56, 83, 0.9), rgba(0, 176, 199, 0.5)), url('https://images.unsplash.com/photo-1544605151-c0a6b72a6b47?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .culture-content-section {
+            padding: 80px 0;
+        }
+
+        .culture-article {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            margin-bottom: 80px;
+            align-items: center;
+        }
+
+        .culture-hero h1 {
+            color: #fff !important;
+            margin-bottom: 16px;
+        }
+
+        .culture-hero .highlight {
+            color: var(--kz-yellow) !important;
+        }        @media (min-width: 992px) {
+            .culture-article {
+                grid-template-columns: 1fr 1fr;
+            }
+            .culture-article.reverse .article-text {
+                order: 2;
+            }
+            .culture-article.reverse .article-img-wrapper {
+                order: 1;
+            }
+        }
+
+        .article-img-wrapper {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .article-img-wrapper img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.7s ease;
+        }
+
+        .article-img-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .article-text h3 {
+            font-size: 2.2rem;
+            margin-bottom: 16px;
+            color: var(--kz-blue-dark);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .article-text p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .tradition-list {
+            list-style: none;
+            margin-top: 24px;
+        }
+
+        .tradition-list li {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .tradition-list i {
+            color: var(--kz-yellow-dark);
+            font-size: 1.5rem;
+            margin-top: 2px;
+        }
+        
+        .tradition-list strong {
+            color: var(--text-color);
+        }
+        
+        .breadcrumb {
+            margin-bottom: 32px;
+        }
+        
+        .breadcrumb a {
+            color: var(--kz-blue);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color var(--transition-speed);
+        }
+        
+        .breadcrumb a:hover {
+            color: var(--kz-blue-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <i class="ph ph-sun-horizon"></i>
+                <span>Qazaqstan</span>
+            </a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+                    <li><a href="culture.html" class="nav-link active" data-i18n="nav_culture">Culture</a></li>
+                    <li><a href="index.html#venues" class="nav-link" data-i18n="nav_venues_link">Venues</a></li>
+                </ul>
+                <div class="lang-selector">
+                    <button class="lang-btn active" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="kk">KK</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Culture Hero Section -->
+        <section class="culture-hero fade-in">
+            <div class="culture-hero-bg"></div>
+            <div class="container">
+                <span class="eyebrow" data-i18n="culture_hero_eyebrow">Heart of the Steppe</span>
+                <h1 data-i18n="culture_hero_title">Cultural <span class="highlight">Heritage</span></h1>
+                <p style="max-width: 600px; margin: 0 auto; font-size: 1.25rem; opacity: 0.9;" data-i18n="culture_hero_desc">Explore the ancient customs, legendary hospitality, and vibrant traditions of the Kazakh people.</p>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="culture-content-section section">
+            <div class="container">
+                
+                <div class="breadcrumb fade-in">
+                    <a href="index.html" data-i18n="back_to_home"><i class="ph ph-arrow-left"></i> Back to Home</a>
+                </div>
+
+                <!-- Article 1: Hospitality -->
+                <article class="culture-article fade-in">
+                    <div class="article-text">
+                        <h3 data-i18n="art_hosp_title"><i class="ph-fill ph-hands-clapping"></i> Qonaqasy: The Art of Hospitality</h3>
+                        <p data-i18n="art_hosp_p1">Traditional Kazakh hospitality is memorable to anyone who has visited Kazakhstan. Rooted deeply in their nomadic past, welcoming guests with open arms and the finest delicacies was a sacred duty.</p>
+                        <ul class="tradition-list">
+                            <li>
+                                <i class="ph-fill ph-check-circle"></i>
+                                <div><strong data-i18n="art_hosp_list1_title">Konaqykade:</strong> <span data-i18n="art_hosp_list1_desc">At the end of a feast, the host asks the guest to perform a song or play an instrument, bridging connections through music.</span></div>
+                            </li>
+                            <li>
+                                <i class="ph-fill ph-check-circle"></i>
+                                <div><strong data-i18n="art_hosp_list2_title">Erulik:</strong> <span data-i18n="art_hosp_list2_desc">A beautiful tradition of welcoming new neighbors to the village (aul) with a hearty meal to help them integrate into the society.</span></div>
+                            </li>
+                            <li>
+                                <i class="ph-fill ph-check-circle"></i>
+                                <div><strong data-i18n="art_hosp_list3_title">Shashu:</strong> <span data-i18n="art_hosp_list3_desc">A joyful custom of showering guests with sweets and coins during momentous occasions, symbolizing abundance and good luck.</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="article-img-wrapper">
+                        <!-- Unsplash placeholder for traditional tea/hospitality vibe -->
+                        <img src="/images/qonaqasy.webp" alt="Hospitality">
+                    </div>
+                </article>
+
+                <!-- Article 2: Rites of Passage -->
+                <article class="culture-article reverse fade-in">
+                    <div class="article-text">
+                        <h3 data-i18n="art_life_title"><i class="ph-fill ph-baby"></i> Important Life Milestones</h3>
+                        <p data-i18n="art_life_p1">Children are considered the greatest treasure in a Kazakh family. Numerous customs mark their growth and development, preparing them for the challenges of life on the steppe.</p>
+                        <ul class="tradition-list">
+                            <li>
+                                <i class="ph-fill ph-check-circle"></i>
+                                <div><strong data-i18n="art_life_list1_title">Tusau Kesu:</strong> <span data-i18n="art_life_list1_desc">The "cutting of the ties" ceremony takes place when a child takes its first steps. Their legs are loosely tied with a black and white string, which is then cut by a respected elder to ensure a successful path forward.</span></div>
+                            </li>
+                            <li>
+                                <i class="ph-fill ph-check-circle"></i>
+                                <div><strong data-i18n="art_life_list2_title">Besikke Salu:</strong> <span data-i18n="art_life_list2_desc">The ceremonial placing of the newborn into the traditional cradle (besik), accompanied by blessings and celebrations.</span></div>
+                            </li>
+                            <li>
+                                <i class="ph-fill ph-check-circle"></i>
+                                <div><strong data-i18n="art_life_list3_title">Kyz Uzatu:</strong> <span data-i18n="art_life_list3_desc">A heartfelt and emotional tradition where the bride's parents host a farewell feast before she departs to join her husband's family.</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="article-img-wrapper">
+                        <!-- Unsplash placeholder for family/child/tradition -->
+                        <img src="/images/tysauKesu.jpg" alt="Life Milestones">
+                    </div>
+                </article>
+
+                <!-- Article 3: Nauryz and Celebrations -->
+                <article class="culture-article fade-in">
+                    <div class="article-text">
+                        <h3 data-i18n="art_fest_title"><i class="ph-fill ph-sun"></i> Nauryz & Festivals</h3>
+                        <p data-i18n="art_fest_p1">A tradition dating back to ancient pre-Islamic times, Nauryz is the festival of spring, renewal of nature, and the beginning of a new year, celebrated on the vernal equinox.</p>
+                        <ul class="tradition-list">
+                            <li>
+                                <i class="ph-fill ph-check-circle"></i>
+                                <div><strong data-i18n="art_fest_list1_title">Nauryz Kozhe:</strong> <span data-i18n="art_fest_list1_desc">A special festive drink made of seven ingredients, representing the seven days of the week and universal eternity.</span></div>
+                            </li>
+                            <li>
+                                <i class="ph-fill ph-check-circle"></i>
+                                <div><strong data-i18n="art_fest_list2_title">Aitys:</strong> <span data-i18n="art_fest_list2_desc">A mandatory part of celebrations, Aitys is an improvisational musical and poetic competition between two akyns (bards) playing the dombra.</span></div>
+                            </li>
+                            <li>
+                                <i class="ph-fill ph-check-circle"></i>
+                                <div><strong data-i18n="art_fest_list3_title">Equestrian Games:</strong> <span data-i18n="art_fest_list3_desc">Festivities are often accompanied by traditional games like Baiga (horse racing), demonstrating the deep bond between nomads and horses.</span></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="article-img-wrapper">
+                        <!-- Unsplash placeholder for horse/festival/steppe -->
+                        <img src="/images/naurys.jpeg" alt="Nauryz Festivities">
+                    </div>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="brand">
+                <i class="ph ph-sun-horizon"></i>
+                <span>Qazaqstan</span>
+            </div>
+            <p data-i18n="footer_text">Designed with ❤️ for exploring the Kazakh heritage.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
